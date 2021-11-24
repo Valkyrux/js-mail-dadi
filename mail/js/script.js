@@ -1,0 +1,1 @@
+// creo il database delle mail utilizzando gli arra
