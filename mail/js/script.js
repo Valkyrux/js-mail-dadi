@@ -30,10 +30,10 @@ button.addEventListener("click",
     
     // stampo il risultato sull'HTML
     const searchResult = document.getElementById("answer");
-    if (checkEmailBool) {
-        searchResult.innerHTML = `Benvenuto ${emailsDatabase[indexFound]}`; 
-    } else {
-        searchResult.innerHTML = `L'email non risulta presente nel mio database`; 
-    }
+        if (checkEmailBool) {
+            searchResult.innerHTML = `Benvenuto ${emailsDatabase[indexFound]}`; 
+        } else {
+            searchResult.innerHTML = `L'email non risulta presente nel mio database`; 
+        }
     }
 ) 
