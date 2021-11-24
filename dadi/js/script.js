@@ -7,6 +7,8 @@ button.addEventListener("click",
     function () {
         myValue = Math.floor(Math.random() * 6 + 1);
         pcValue = Math.floor(Math.random() * 6 + 1);
+        console.log(myValue);
+        console.log(pcValue);
         // confronto
         let victoryIndex = 0;
         let winner = "nessuno (pareggio)";
