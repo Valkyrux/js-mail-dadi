@@ -17,8 +17,8 @@ button.addEventListener("click",
         pcValue = Math.floor(Math.random() * 6 + 1);
         console.log(myValue);
         console.log(pcValue);
-        myDice.innerHTML = myValue;
-        PcDice.innerHTML = pcValue;
+        myDice.classList.replace(myDice.classList.item(0), "dice-" + myValue);
+        PcDice.classList.replace(PcDice.classList.item(0), "dice-" + pcValue);
         // confronto
         let victoryIndex = 0;
         let winner = "nessuno (pareggio)";
