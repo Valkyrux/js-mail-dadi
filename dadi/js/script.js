@@ -7,20 +7,23 @@ let pcValue;
 // genero i numeri casuali per la sfida
 button.addEventListener("click", 
     function () {
+        // aggiungere la classe dll'animazione
         myDice.classList.add("animation");
         PcDice.classList.add("animation");
+        // ritardo per togliere la classe dell'animazione
         setTimeout(function(){
             myDice.classList.remove("animation");
             PcDice.classList.remove("animation");
         },1000);
+        // genero i numeri random
         myValue = Math.floor(Math.random() * 6 + 1);
         pcValue = Math.floor(Math.random() * 6 + 1);
-        console.log(myValue);
-        console.log(pcValue);
+        // assegno la classe per il display a forma di dado
         myDice.classList.replace(myDice.classList.item(0), "dice-" + myValue);
         PcDice.classList.replace(PcDice.classList.item(0), "dice-" + pcValue);
-        // confronto
+        // contatore per tenere memoria del punteggio di vittorie ottenute
         let victoryIndex = 0;
+        // confronto
         let winner = "nessuno (pareggio)";
         if (myValue > pcValue) {
             winner = "TU!!!!!!";
