@@ -1,14 +1,24 @@
 // prelevo il comando dall'utente
 const button = document.getElementById("start");
+const myDice = document.querySelector("#your-value div")
+const PcDice = document.querySelector("#pc-value div")
 let myValue;
 let pcValue;
 // genero i numeri casuali per la sfida
 button.addEventListener("click", 
     function () {
+        myDice.classList.add("animation");
+        PcDice.classList.add("animation");
+        setTimeout(function(){
+            myDice.classList.remove("animation");
+            PcDice.classList.remove("animation");
+        },1000);
         myValue = Math.floor(Math.random() * 6 + 1);
         pcValue = Math.floor(Math.random() * 6 + 1);
         console.log(myValue);
         console.log(pcValue);
+        myDice.innerHTML = myValue;
+        PcDice.innerHTML = pcValue;
         // confronto
         let victoryIndex = 0;
         let winner = "nessuno (pareggio)";
