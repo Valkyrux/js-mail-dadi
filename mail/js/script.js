@@ -27,9 +27,8 @@ button.addEventListener("click",
                 indexFound = i;
             }
         }
-    
     // stampo il risultato sull'HTML
-    const searchResult = document.getElementById("answer");
+        const searchResult = document.getElementById("answer");
         if (checkEmailBool) {
             searchResult.innerHTML = `Benvenuto ${emailsDatabase[indexFound]}`; 
         } else {
